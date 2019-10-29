@@ -1,0 +1,24 @@
+.mapped {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.truck-list-holder {
+    height: calc(100% - 4em - 45%);
+    width: 100%;
+    overflow: scroll;
+    align-items: center;
+}
+
+.truck-list-holder > h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: cursive;
+    padding: 8px 8px;
+    background: rgba(255, 255, 255, .99);
+    color: rgb(35, 0, 75);
+    border: .5px .5px solid black;
+}
