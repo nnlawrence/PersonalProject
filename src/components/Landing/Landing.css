@@ -3,22 +3,52 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 102px;
+  /* border-top: .5px solid black; */
+  border-bottom: .5px solid black;
 }
 
 .truck-list-holder {
-    height: calc(100% - 4em - 45%);
+    height: calc(100% - 45%);
     width: 100%;
     overflow: scroll;
     align-items: center;
 }
 
-.truck-list-holder > h1 {
+.mapped-head {
     text-align: center;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     font-family: cursive;
-    padding: 8px 8px;
-    background: rgba(255, 255, 255, .99);
-    color: rgb(35, 0, 75);
+    padding-top: 8px;
+    padding-bottom: 6px;
+    background: rgba(0, 0, 0, .8);
+    color: ghostwhite;
+    letter-spacing: 5px;
     border: .5px .5px solid black;
+    position: fixed;
+    width: 100%;
+}
+
+.food-search {
+    width: 95%;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.add-new-truck {
+    /* margin-left: calc(50% - 60px); */
+    font-size: 8px;
+    font-family: cursive;
+    background: rgba(146, 114, 45, 0.6);
+    color: ghostwhite;
+    width: 80%;
+    height: 25px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.landing-container {
+    height: calc(100% - 4em);
 }

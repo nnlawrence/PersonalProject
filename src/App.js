@@ -2,15 +2,13 @@ import React from 'react';
 import 'reset-css'
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import Landing from './components/Landing/Landing';
-import Map from './components/Map/Map';
+import routes from './routes';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Map />
-      <Landing />
+      { routes }
     </div>
   );
 }

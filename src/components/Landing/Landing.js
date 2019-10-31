@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import TruckList from '../TruckList/TruckList';
 import './Landing.css'
+import { Link } from 'react-router-dom';
+import Map from '../Map/Map';
 
 class Landing extends Component {
     constructor(props) {
@@ -25,16 +27,45 @@ class Landing extends Component {
         })
     }
 
+    handleInput = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    deleteTruck = (id) => {
+        axios.delete(`/api/truck/${id}`).then(res => {
+            this.setState({
+                trucks: res.data
+            })
+            this.getTrucks()
+        })
+        .catch(err => console.log(err))
+    }
+
     render() { 
         console.log(this.state)
         const mappedTrucks = this.state.trucks.map((list, index) => {
-            return <TruckList key={ index } trucks={ list } />
+            return <TruckList key={ index } trucks={ list } deleteTruck={ this.deleteTruck } />
         })
 
         return ( 
-            <div className='truck-list-holder'>
-                <h1>Food Trucks</h1>
-                <div className='mapped'>{ mappedTrucks }</div>
+            <div className='landing-container'>
+                <Map />
+                <div className='truck-list-holder'>
+                    <div className='mapped-head'>
+                    <h1>Food Trucks</h1>
+                    <input 
+                        className='food-search' 
+                        onChange={(e) => this.handleInput(e)} 
+                        placeholder='Food Type, Name' 
+                        type='text' />
+                        <Link to='/form'><button className='add-new-truck'>Add New Truck</button></Link>
+                    </div>
+                    <div className='mapped'>
+                    { mappedTrucks }
+                    </div>
+                </div>
             </div>
          );
     }

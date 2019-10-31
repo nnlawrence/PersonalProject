@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Navbar.css'
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
     constructor (){
@@ -39,7 +40,7 @@ class Navbar extends Component {
                    :
                    'no-menu'
                }>
-                    <li>Home</li>
+                    <li><Link to='/'>Home</Link></li>
                     <li>Profile</li>
                     <li>Login</li>
                     <li>Admin Registration</li>

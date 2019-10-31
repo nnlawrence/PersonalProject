@@ -24,6 +24,8 @@ app.use(session({
 }))
 
 app.get('/api/trucks', ctrl.getTrucks)
+app.post('/api/trucks', ctrl.addTruck)
+app.delete('/api/truck/:id', ctrl.deleteTruck)
 
 const port = SERVER_PORT;
 

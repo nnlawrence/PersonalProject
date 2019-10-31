@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './TruckList.css'
 
-class TruckList extends Component {
-    constructor(props) {
-        super(props);
-    }
-    render() { 
-        console.log(this.props)
-        const { truck_name, food_type, image, contact, latitude, longitude } = this.props.trucks
-        console.log(this.props)
+const TruckList = (props) => {
+        console.log(props)
+        const { truck_id, truck_name, food_type, image, contact, latitude, longitude } = props.trucks
+        console.log(props)
         return ( 
             <div className='truck-details'>
+                <span className='x-delete' onClick={ () => props.deleteTruck(truck_id) }>x</span>
                 <h1>{ truck_name }</h1>
                 <img src={image} alt='pic' />
                 <p>{ food_type}</p>
@@ -20,6 +17,6 @@ class TruckList extends Component {
             </div>
          );
     }
-}
+
  
 export default TruckList;
