@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class Navbar extends Component {
     constructor (){
@@ -16,6 +17,13 @@ class Navbar extends Component {
         })
     }
 
+    handleLogout = () => {
+        axios.post('/auth/logout').then(res => {
+            this.props.history.push('/')
+        })
+        .catch(err => console.log(err))
+    }
+
     render() {
     return (
         <div>
@@ -26,7 +34,7 @@ class Navbar extends Component {
                 <ul className='navbar-menu'>
                     <li>Home</li>
                     <li>Profile</li>
-                    <li>Login</li>
+                    <li>Login/Register</li>
                     <li>Admin Registration</li>
                     <li>Logout</li>
                 </ul>
@@ -41,10 +49,10 @@ class Navbar extends Component {
                    'no-menu'
                }>
                     <li><Link to='/'>Home</Link></li>
-                    <li>Profile</li>
-                    <li>Login</li>
+                    <li><Link to='/profile'>Profile</Link></li>
+                    <li><Link to='/auth/login'>Login/Register</Link></li>
                     <li>Admin Registration</li>
-                    <li>Logout</li>
+                    <Link to='/'><li onClick={ this.handleLogout }>Logout</li></Link>
                </ul>
         </div>
       )

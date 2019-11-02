@@ -14,6 +14,7 @@ img {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 1px;
     letter-spacing: 2px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.25), 0 10px 10px 0 rgba(0,0,0,.26);
 }
 
 .truck-details > h1 {
@@ -21,18 +22,26 @@ img {
     /* font-weight: 500; */
     margin-top: 5px;
     margin-bottom: 10px;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 .truck-details > p {
     margin: 5px;
 }
 
+.truck-details > img {
+    /* box-shadow: 0 1px 5px 2px rgba(85, 85, 85, 0.25), 0 10px 10px 0 rgba(85, 85, 85, 0.26); */
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
 .x-delete {
     font-size: 20px;
     font-weight: 550;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: rgba(170, 116, 0, 1);
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     margin-left: 90%;
     margin-bottom: 1px;
 }

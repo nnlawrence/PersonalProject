@@ -57,13 +57,13 @@ class Form extends Component {
                 <input 
                     className='new-truck-input'
                     // placeholder='Food Truck Name' 
-                    name='name' 
+                    name='truck_name' 
                     onChange={(e) => this.handleInput(e)}  />  
                 <label>Food Type: </label>    
                 <input
                     className='new-truck-input'
                     // placeholder='Food Type'
-                    name='type'
+                    name='food_type'
                     onChange={(e) => this.handleInput(e)} />
                 <label>Truck Photo: </label>
                 <input

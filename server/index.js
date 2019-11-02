@@ -3,7 +3,8 @@ const express = require('express');
 const massive = require('massive');
 const session = require('express-session');
 const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env;
-const ctrl = require('./controller');
+const ctrl = require('./controllers/controller');
+const actrl = require('./controllers/authController');
 
 const app = express();
 
@@ -23,10 +24,17 @@ app.use(session({
     }
 }))
 
-app.get('/api/trucks', ctrl.getTrucks)
-app.post('/api/trucks', ctrl.addTruck)
-app.delete('/api/truck/:id', ctrl.deleteTruck)
+// Endpoints
+app.get('/api/trucks', ctrl.getTrucks);
+app.post('/api/trucks', ctrl.addTruck);
+app.delete('/api/truck/:truck_id', ctrl.deleteTruck);
+app.get('/api/truckmin/:user_id', ctrl.getAdminTruck);
+
+//Auth Endpoints
+app.post('/auth/register', actrl.register);
+app.post('/auth/login', actrl.login);
+app.post('/auth/logout', actrl.logout);
 
 const port = SERVER_PORT;
 
-app.listen(port, () => console.log(`server running ${port}`))
+app.listen(port, () => console.log(`server running ${port}`));
