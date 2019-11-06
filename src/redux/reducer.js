@@ -4,6 +4,8 @@ const initialState = {
     photo: ''
 }
 
+
+
 const UPDATE_USER = 'UPDATE_USER'
 
 export function updateUser(user) {
@@ -18,7 +20,7 @@ export default function reducer (state = initialState, action){
     const { type, payload } = action
     switch(type){
         case UPDATE_USER:
-            return {...state, email: payload, photo: payload, id: payload}
+            return {...state, email: payload.email, photo: payload.photo, id: payload.id}
         default:
             return state
     }

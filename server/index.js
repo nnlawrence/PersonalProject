@@ -27,8 +27,9 @@ app.use(session({
 // Endpoints
 app.get('/api/trucks', ctrl.getTrucks);
 app.post('/api/trucks', ctrl.addTruck);
-app.delete('/api/truck/:truck_id', ctrl.deleteTruck);
+app.delete('/api/truck/:truck_id/:user_id', ctrl.deleteTruck);
 app.get('/api/truckmin/:user_id', ctrl.getAdminTruck);
+app.put('/api/truck/:truck_id/:user_id', ctrl.editTruck)
 
 //Auth Endpoints
 app.post('/auth/register', actrl.register);

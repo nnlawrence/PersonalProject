@@ -21,6 +21,7 @@ class Auth extends Component {
                 email: '',
                 password: ''
             })
+            console.log(res.data)
             this.props.updateUser(res.data)
             this.props.history.push('/profile')
         })
@@ -41,20 +42,21 @@ class Auth extends Component {
         .catch(err => console.log(err))
     }
 
-    //Check is User is an Admin or not
+    //Check if User is an Admin or not
     clickAdmin = () => {
         this.setState({
             isAdmin: true
         })
     }
 
-    //Check is User is an not an Admin
+    //Check is User is not an Admin
     clickUser = () => {
         this.setState({
             isAdmin: false
         })
     }
 
+    //handle what is going in input fields
     handleInput = (e) => {
         this.setState({
             [e.target.name]: e.target.value

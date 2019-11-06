@@ -3,7 +3,8 @@ import axios from 'axios';
 import TruckList from '../TruckList/TruckList';
 import './Landing.css'
 import { Link } from 'react-router-dom';
-import Map from '../Map/Map';
+import MapContainer from '../MapContainer/MapContainer';
+// import Map from '../Map/Map';
 
 class Landing extends Component {
     constructor(props) {
@@ -12,12 +13,12 @@ class Landing extends Component {
             trucks: []
          }
     }
-
+    //function running get trucks
     componentDidMount() {
         console.log(this.state)
         this.getTrucks()
     }
-
+    //get trucks from db
     getTrucks = () => {
         axios.get('/api/trucks').then(res => {
             console.log(res)
@@ -32,7 +33,7 @@ class Landing extends Component {
             [e.target.name]: e.target.value
         })
     }
-
+    //Delete a food truck
     deleteTruck = (id) => {
         axios.delete(`/api/truck/${id}`).then(res => {
             this.setState({
@@ -50,23 +51,25 @@ class Landing extends Component {
         })
 
         return ( 
+           <div className='home'>
+            <div className='map-container'><MapContainer /></div>
             <div className='landing-container'>
-                <Map />
-                <div className='truck-list-holder'>
-                    <div className='mapped-head'>
+                <div className='mapped-head'>
                     <h1>Food Trucks</h1>
                     <input 
                         className='food-search' 
                         onChange={(e) => this.handleInput(e)} 
                         placeholder='Food Type, Name' 
                         type='text' />
-                        <Link to='/form'><button className='add-new-truck'>Add New Truck</button></Link>
+                      {/* <Link to='/form'><button className='add-new-truck'>Add New Truck</button></Link> */}
                     </div>
+                <div className='truck-list-holder'>
                     <div className='mapped'>
                     { mappedTrucks }
                     </div>
                 </div>
             </div>
+           </div> 
          );
     }
 }

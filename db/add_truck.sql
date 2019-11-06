@@ -4,7 +4,8 @@ insert into trucks (
     image,
     contact,
     latitude,
-    longitude
+    longitude,
+    user_id
 )
 values (
     $1,
@@ -12,7 +13,8 @@ values (
     $3,
     $4,
     $5,
-    $6
+    $6,
+    $7
 );
 
 select * from trucks;
