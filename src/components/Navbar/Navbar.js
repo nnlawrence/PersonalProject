@@ -26,7 +26,7 @@ class Navbar extends Component {
 
     render() {
     return (
-        <div>
+        <div className='navbar-container'>
             <nav className="navbar">
                 <ul>
                     <h1 className='title'>Voilà</h1>
@@ -35,7 +35,6 @@ class Navbar extends Component {
                     <li>Home</li>
                     <li>Profile</li>
                     <li>Login/Register</li>
-                    <li>Admin Registration</li>
                     <li>Logout</li>
                 </ul>
                 <div className='hamburger' onClick={ this.openMenu }>
@@ -48,11 +47,10 @@ class Navbar extends Component {
                    :
                    'no-menu'
                }>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/profile'>Profile</Link></li>
-                    <li><Link to='/auth/login'>Login/Register</Link></li>
-                    <li>Admin Registration</li>
-                    <Link to='/'><li onClick={ this.handleLogout }>Logout</li></Link>
+                    <li><Link className='link' to='/'>Home</Link></li>
+                    <li><Link className='link' to='/profile'>Profile</Link></li>
+                    <li><Link className='link' to='/auth/login'>Login/Register</Link></li>
+                    <li onClick={ this.handleLogout }><Link className='link' to='/'>Logout</Link></li>
                </ul>
         </div>
       )

@@ -6,9 +6,6 @@ const mapStyles = {
     // position: 'absolute',
     width: '100%',
     height: '35%',
-    // marginTop: '-38%',
-    // marginLeft: '1.8%',
-    // border: '2px solid black'
   }
 };
 
@@ -125,8 +122,8 @@ export default CurrentLocation;
 CurrentLocation.defaultProps = {
   zoom: 14,
   initialCenter: {
-    lat: 40.235119,
-    lng: -111.662193
+    lat: 40.391617,
+    lng: -111.850769
   },
   centerAroundCurrentLocation: false,
   visible: true

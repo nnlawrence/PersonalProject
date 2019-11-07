@@ -1,5 +1,5 @@
 .Auth {
-    background: rgba(255, 255, 255, .95);
+    background: rgba(255, 255, 255, .6);
     height: calc(100% - 4em);
     color: black;
     display: flex;

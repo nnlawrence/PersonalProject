@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import TruckList from '../TruckList/TruckList';
 import './Landing.css'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import MapContainer from '../MapContainer/MapContainer';
 // import Map from '../Map/Map';
 

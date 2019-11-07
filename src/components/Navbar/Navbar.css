@@ -51,6 +51,7 @@
 
 @media (max-width: 1100px) {
     .navbar {
+        /* background: rgba(170, 116, 0, 0.9); */
         background: rgba(170, 116, 0, 0.9);
         /* background: rgba(0, 0, 0, .9); */
         box-shadow: 0 4px 3px -1px rgba(30, 30, 30, 0.6);
@@ -61,11 +62,13 @@
     }
     /* https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1531&q=80 strawberry */
     .menu {
-        height: calc(50% - 4em);
-        /* width: 250px; */
+        height: calc(40% - 4em);
+        width: 150px;
         background: rgba(255, 255, 255, 1);
-        color: rgba(0, 0, 0, .8);
-        position: fixed;
+        /* background: rgba(0, 0, 0, .9); */
+        /* color: rgba(0, 0, 0, .8); */
+        color: white;
+        position: absolute;
         right: -250px;
         display: flex;
         flex-direction: column;
@@ -74,13 +77,16 @@
         transition: 1s;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         border-left: 1px solid black;
+        /* border-right: 1px solid white; */
         border-bottom: 1px solid black;
         border-bottom-left-radius: 12px;
+        /* border-bottom-right-radius: 12px; */
         box-shadow: -2px 2px 5px 0px rgba(30, 30, 30, 0.6);
-        z-index: 500;
+        z-index: 1000;
     }
     .slide > li {
-        margin: 20px;
+        margin: 10px;
+        text-align: center;
     }
     .slide {
         right: 0px;
@@ -105,5 +111,9 @@
 
 .no-menu {
     display: none;
+}
+
+.link {
+    color: black;
 }
 

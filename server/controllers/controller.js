@@ -50,5 +50,18 @@ module.exports = {
             console.log(data)
             return res.status(200).send(data)
         })
+    },
+    getAddresses: (req, res) => {
+        const { latitude, longitude } = req.body
+        const db = req.app.get('db')
+        // console.log(data)
+        db.get_addresses(latitude, longitude)
+        .then(data => {
+            console.log(data)
+            res.status(200).send(data)
+        })
+        .catch(err => {
+            res.status(500).send(err)
+        })
     }
 }
