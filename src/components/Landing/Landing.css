@@ -1,12 +1,14 @@
 .mapped {
   width: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
   /* margin-top: 102px; */
   /* border-top: .5px solid black; */
   /* border-bottom: .5px solid black; */
-  background: rgba(0, 0, 0, .5)
+  background: rgba(0, 0, 0, .5);
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .truck-list-holder {
@@ -20,7 +22,7 @@
     border-bottom: 1px solid black;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
-    background: rgba(0, 0, 0, .5)
+    background: rgba(0, 0, 0, .5);
 }
 
 .mapped-head {
@@ -47,14 +49,13 @@
     /* margin-top: .2%; */
 }
 
-.food-search {
+/* .food-search {
     width: 95%;
     text-align: center;
     border-radius: 12px;
     font-size: 14px;
-    /* background: rgba(0, 0, 0, 0.9); */
-    /* color: white; */
-}
+    z-index: 999;
+} */
 
 .landing-container {
     /* height: calc(100% - 4em); */

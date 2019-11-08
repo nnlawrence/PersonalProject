@@ -5,6 +5,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import TruckList from '../TruckList/TruckList';
 import { Link } from 'react-router-dom';
+import Switch from '../Switch';
 
 //component did mount sending get request to backend to select all where user id is id that is stored in redux or session
 
@@ -159,6 +160,9 @@ class Profile extends Component {
         return (
             <div className='profile-container'>
               <div className='profile-title'>Profile</div>
+              <div className='switch-text'>
+                  <p>Mark Available To Open</p>
+                  <Switch /></div>
               <div className='profile-truck'>
                     {this.state.addedTruck.map((addedList, index) => {
                         return <TruckList key={`profileTruck: ${index}`}trucks={addedList} deleteTruck={ this.deleteTruck } selectTruck={this.selectTruck} />

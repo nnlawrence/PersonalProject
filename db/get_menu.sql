@@ -1,0 +1,1 @@
+select * from menu where truck_id = $1

@@ -1,0 +1,13 @@
+.infowindow {
+    margin: 1px;
+}
+
+.infowindow > p {
+    margin: 5px;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.infowindow > a {
+    margin-left: 28%;
+}

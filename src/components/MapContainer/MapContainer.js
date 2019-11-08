@@ -1,6 +1,7 @@
 import React from 'react';
 import { GoogleApiWrapper, InfoWindow, Map, Marker } from 'google-maps-react';
 import axios from 'axios';
+import './MapContainer.css'
 // import Paper from 'material-ui/Paper';
 // import Typography from 'material-ui/Typography';
 // import { typography } from 'material-ui/styles';
@@ -34,6 +35,7 @@ class GoogleMapsContainer extends React.Component {
   }
 
   onMarkerClick = (props, marker, e) => {
+    console.log(props)
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
@@ -49,7 +51,7 @@ class GoogleMapsContainer extends React.Component {
     }
   }
   render() {
-    console.log(this.state.addresses)
+    console.log(this.state.selectedPlace)
 
     const mappedAddresses = this.state.addresses.map((addresses, index) => {
             return <Marker key={index} 
@@ -58,8 +60,9 @@ class GoogleMapsContainer extends React.Component {
                            onClick = { this.onMarkerClick }
                            title = { 'Changing Colors Garage' }
                           //  position = {{ lat: 39.648209, lng: -75.711185 }}
-                           name = { 'Changing Colors Garage' } 
-                           label={addresses.truck_name}
+                           name = { addresses.truck_name } 
+                           type = {addresses.food_type}
+                           contact = {addresses.contact}
                             />
                            
                     })
@@ -112,11 +115,11 @@ const style = {
               302-293-8627
             </Typography>
           </Paper> */}
-                <div>
-                    <p>{this.state.addresses.truck_name}</p>
-                    <p>{this.state.addresses.food_type}</p>
-                    <p>{this.state.addresses.contact}</p>
-                    <a href="https://thefoodtruckleague.com/">Events</a>
+                <div className='infowindow'>
+                    <p>Truck: {this.state.selectedPlace.name}</p>
+                    <p>Food: {this.state.selectedPlace.type}</p>
+                    <p>Contact: {this.state.selectedPlace.contact}</p>
+                    <a href="https://thefoodtruckleague.com/">View Events</a>
                 </div>
         </InfoWindow>
       </Map>

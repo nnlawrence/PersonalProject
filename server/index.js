@@ -31,6 +31,7 @@ app.delete('/api/truck/:truck_id/:user_id', ctrl.deleteTruck);
 app.get('/api/truckmin/:user_id', ctrl.getAdminTruck);
 app.put('/api/truck/:truck_id/:user_id', ctrl.editTruck)
 app.get('/api/addresses', ctrl.getAddresses)
+app.get('/api/menu/:id', ctrl.getMenu)
 
 //Auth Endpoints
 app.post('/auth/register', actrl.register);

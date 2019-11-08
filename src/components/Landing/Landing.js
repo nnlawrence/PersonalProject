@@ -53,21 +53,20 @@ class Landing extends Component {
         return ( 
            <div className='home'>
             <div className='map-container'><MapContainer /></div>
-            <div className='landing-container'>
+              <div className='landing-container'>
                 <div className='mapped-head'>
                     <h1>Food Trucks</h1>
-                    <input 
+                    {/* <input 
                         className='food-search' 
                         onChange={(e) => this.handleInput(e)} 
                         placeholder='Food Type, Name' 
-                        type='text' />
-                      {/* <Link to='/form'><button className='add-new-truck'>Add New Truck</button></Link> */}
-                    </div>
-                <div className='truck-list-holder'>
-                    <div className='mapped'>
-                    { mappedTrucks }
-                    </div>
+                        name='trucks' /> */}
                 </div>
+                <div className='truck-list-holder'>
+                <div className='mapped'>
+                    { mappedTrucks }
+                </div>
+              </div>
             </div>
            </div> 
          );

@@ -14,3 +14,17 @@ create table trucks (
     40.235119,
     -111.662193
 );
+
+create table menu (
+    menu_id serial primary key,
+    menu_item varchar(150),
+    menu_description varchar(400),
+    menu_price float,
+    menu_image varchar(1000),
+    truck_id int references trucks(truck_id)
+);
+users table
+id	integer	NOT NULL	
+is_owner	boolean				
+email	character varying (204)				
+password	character varying (204)
