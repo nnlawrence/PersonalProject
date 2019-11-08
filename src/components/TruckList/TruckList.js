@@ -5,7 +5,7 @@ import './TruckList.css';
 
     const TruckList = (props) => {
         console.log(props, 'jest')
-        const { truck_id, truck_name, food_type, image, contact, latitude, longitude } = props.trucks
+        const { truck_id, truck_name, food_type, image, contact } = props.trucks
         console.log(props.deleteTruck)
         //if(isAdmin)
         return ( 
@@ -15,8 +15,8 @@ import './TruckList.css';
                 <img src={image} alt='pic' />
                 <p>{ food_type}</p>
                 <p>{ contact }</p>
-                <p>{ latitude }</p>
-                <p>{ longitude }</p>
+                {/* <p>{ latitude }</p>
+                <p>{ longitude }</p> */}
                 <button onClick={() => props.selectTruck(truck_id)}>Select For Edit</button>
             </div>
          );

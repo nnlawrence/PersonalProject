@@ -52,12 +52,12 @@
 @media (max-width: 1100px) {
     .navbar {
         /* background: rgba(170, 116, 0, 0.9); */
-        background: rgba(170, 116, 0, 0.9);
+        background: rgba(144, 99, 0, 0.9);
         /* background: rgba(0, 0, 0, .9); */
         box-shadow: 0 4px 3px -1px rgba(30, 30, 30, 0.6);
     }
     .App {
-      background-image: url('https://images.unsplash.com/photo-1501959915551-4e8d30928317?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
+      /* background-image: url('https://images.unsplash.com/photo-1501959915551-4e8d30928317?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'); */
       height: 100vh;
     }
     /* https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1531&q=80 strawberry */

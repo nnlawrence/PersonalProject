@@ -1,5 +1,7 @@
 .Auth {
-    background: rgba(255, 255, 255, .6);
+    background: rgba(250, 250, 250, .5);
+    background-image: url('https://images.unsplash.com/photo-1531361171768-37170e369163?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
+    background-size: cover;
     height: calc(100% - 4em);
     color: black;
     display: flex;
@@ -13,7 +15,8 @@
     height: 55%;
     border-radius: 8px;
     -webkit-box-shadow: 0 14px 28px 0 rgba(0,0,0,.25), 0 10px 10px 0 rgba(0,0,0,.26);
-    box-shadow: 0 14px 28px 0 rgba(0,0,0,.25), 0 10px 10px 0 rgba(0,0,0,.26);
+    box-shadow: 0 14px 28px 0 rgba(0,0,0,.35), 0 10px 10px 0 rgba(0,0,0,.36);
+    background: rgba(245, 245, 245, 1);
     background-image: radial-gradient(97deg, white);
     display: flex;
     flex-direction: column;
@@ -37,9 +40,10 @@
 
 .dark-button {
     border-radius: 1px;
-    background-image: radial-gradient(circle at 50% -46%,rgba(44, 43, 43, 0),#11100f);
+    background-image: radial-gradient(circle at 50% -46%,rgba(76, 224, 70, 0.4),#3d9935);
     /* -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.2); */
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.2);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(21, 194, 44, 0.2);
+    border-radius: 6px;
     padding: 10px 20px;
     color: #fff;
     border: none;
@@ -49,13 +53,14 @@
 .auth-input-box > p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 10px;
-    font-weight: 400;
-    color: black;
+    font-weight: 500;
+    color: #F29A3E;
+    text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     letter-spacing: 1.5px;
 }
 
 .auth-input-box > input {
-    border: 1px solid gray;
+    border: 1px solid rgba(76, 224, 70, 0.5);
     width: 250px;
     border-radius: 4px;
     box-shadow: 0 1.5px 5px -1px rgba(30, 30, 30, 0.6);
@@ -66,12 +71,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 2px;
     margin-top: 5px;
     margin-bottom: 5px;
     box-shadow: 0 1.5px 3px -1px rgba(30, 30, 30, 0.6);
+    color: #F29A3E;
+    font-weight: 700;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 .admin-option > label {
