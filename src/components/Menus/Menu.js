@@ -12,7 +12,8 @@ class Menu extends Component {
     }
 
     componentDidMount() {
-        let id = +this.props.location.pathname[this.props.location.pathname.length - 1]
+        let id = +this.props.match.params.id
+        // .location.pathname[this.props.location.pathname.length - 1]
         console.log(id)
         axios.get(`/api/menu/${id}`)
         .then(res => {

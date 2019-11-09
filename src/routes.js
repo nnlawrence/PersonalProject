@@ -12,6 +12,6 @@ export default (
         <Route path='/form' component={ Form } />
         <Route path='/profile' component={ Profile } />
         <Route path='/auth/login' component={ Auth } />
-        <Route path='/menu' component={ Menu } />
+        <Route path='/menu/:id' component={ Menu } />
     </Switch>
 )

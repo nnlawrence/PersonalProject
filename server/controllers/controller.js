@@ -66,10 +66,11 @@ module.exports = {
     },
     getMenu: (req, res) => {
         const { id } = req.params
+        console.log(req.params)
         const { menu_id, menu_item, menu_description, menu_price, menu_image } = req.body
         const db = req.app.get('db')
         // console.log(data)
-        db.get_menu(+id, +menu_id, menu_item, menu_description, menu_price, menu_image)
+        db.get_menu(+id)
         .then(data => {
             console.log(data)
             res.status(200).send(data)
