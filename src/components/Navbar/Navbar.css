@@ -1,7 +1,7 @@
 .navbar {
     width: 100%;
     height: 4em;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, 0.8);
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
@@ -14,6 +14,7 @@
 .title {
     font-size: 30px;
     margin-left: 20px;
+    /* text-shadow: -1px -1px 0 #000080, 1px -1px 0 #000080, -1px 1px 0 #000080, 1px 1px 0 #000080; */
 }
 
 .navbar > .navbar-menu {
@@ -43,6 +44,7 @@
     align-items: center;
     font-size: 25px;
     margin-right: 20px;
+    /* text-shadow: -1px -1px 0 #000080, 1px -1px 0 #000080, -1px 1px 0 #000080, 1px 1px 0 #000080; */
 }
 
 .hamburger:hover {
@@ -74,7 +76,8 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        transition: 1s;
+        transition: ease-in;
+        transition-duration: .3s;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         border-left: 1px solid black;
         /* border-right: 1px solid white; */

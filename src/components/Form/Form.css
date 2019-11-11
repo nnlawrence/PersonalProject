@@ -1,8 +1,11 @@
 .new-truck-info {
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    /* margin: 10px; */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+    background-size: cover;
+    height: 100vh;
 }
 
 .new-truck-info > label {
@@ -17,6 +20,7 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border-radius: 8px;
     font-size: 14px;
+    box-shadow: 0 1.5px 5px -1px rgba(30, 30, 30, 0.6);
 }
 
 .new-form-title {
@@ -43,4 +47,6 @@
 .complete-btn:hover {
     cursor: pointer;
     font-weight: 700;
+    transition: ease-in;
+    transition-duration: .1s;
 }

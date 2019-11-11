@@ -17,7 +17,8 @@ import { withRouter } from 'react-router-dom';
         
         return ( 
             <div className='truck-details'>
-                <span className='x-delete' onClick={ () => this.props.deleteTruck(truck_id) }>x</span>
+                <span className='x-delete' onClick={ () =>
+                     this.props.deleteTruck(truck_id) }>x</span>
                 <div className='route-to-menu' onClick={ this.menuRoute }>
                 <h1>{ truck_name }</h1>
                 <img src={image} alt='pic' />
@@ -26,7 +27,7 @@ import { withRouter } from 'react-router-dom';
                 </div>
                 {/* <p>{ latitude }</p>
                 <p>{ longitude }</p> */}
-                <button onClick={() => this.props.selectTruck(truck_id)}>Select For Edit</button>
+                <button className='select-for-edit' onClick={() => this.props.selectTruck(truck_id)}>Select For Edit</button>
             </div>
          );
     }

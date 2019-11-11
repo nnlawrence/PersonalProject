@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 class Navbar extends Component {
     constructor (){
@@ -22,6 +23,11 @@ class Navbar extends Component {
             this.props.history.push('/')
         })
         .catch(err => console.log(err))
+        swal({
+            title: "👋",
+            text: "Logged Out",
+            icon: "success",
+          });
     }
 
     render() {

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { updateUser } from '../../redux/reducer';
 import './Auth.css'
+import swal from 'sweetalert';
 
 class Auth extends Component {
     constructor(props) {
@@ -19,13 +20,21 @@ class Auth extends Component {
         axios.post('/auth/login', { email: this.state.email, password: this.state.password }).then(res => {
             this.setState({
                 email: '',
-                password: ''
+                password: '',
+                isAdmin: ''
             })
             console.log(res.data)
             this.props.updateUser(res.data)
-            this.props.history.push('/profile')
+            if(this.state.isAdmin !== false){this.props.history.push('/profile')}else{
+                this.props.history.push('/')
+            }
         })
-        .catch(err => console.log(err))
+        .catch(err =>             
+            swal({
+            title: "Invalid Credentials",
+            text: "🤬",
+            icon: "warning",
+          }))
     }
 
     //Register User
@@ -34,12 +43,21 @@ class Auth extends Component {
         .then(res => {
             this.setState({
                 email: '',
-                password: ''
+                password: '',
+                isAdmin: ''
             })
             this.props.updateUser(res.data)
-            this.props.history.push('/profile')
+
+            if(this.state.isAdmin !== false){this.props.history.push('/profile')}else{
+                this.props.history.push('/')
+            }
         })
         .catch(err => console.log(err))
+        swal({
+            title: "You're Registered!",
+            text: "Let's Keep it Moving!",
+            icon: "success",
+          });
     }
 
     //Check if User is an Admin or not

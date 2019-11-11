@@ -27,6 +27,7 @@
     background: rgba(20, 20, 20, .9);
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 4px #553b0a;
 }
 
 .profile-truck {
@@ -79,6 +80,13 @@
     /* margin-top: 10px; */
 }
 
+.add-new-truck:hover {
+    background: rgba(0,0,0,0.8);
+    color: white;
+    transition: ease-in;
+    transition-duration: .3s;
+}
+
 .submit-edit {
     color: white;
     font-size: 14px;
@@ -88,6 +96,13 @@
     /* margin-top: -5px; */
     background: rgba(146, 114, 45, 0.8);
     border-radius: 12px;
+}
+
+.submit-edit:hover {
+    background: rgba(0,0,0,0.8);
+    color: white;
+    transition: ease-in;
+    transition-duration: .3s;
 }
 
 .input-edit {

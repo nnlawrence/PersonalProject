@@ -3,6 +3,7 @@ import './Form.css';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { updateUser } from '../../redux/reducer';
+import swal from 'sweetalert';
 
 class Form extends Component {
     constructor(props) {
@@ -46,6 +47,11 @@ class Form extends Component {
             this.getTrucks(res.data)
             this.props.history.push('/profile')
         })
+        swal({
+            title: "Excellent! 👍",
+            text: "Your Food Truck Was Added",
+            icon: "success",
+          });
     }
 
     handleInput = (e) => {

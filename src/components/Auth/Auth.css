@@ -71,14 +71,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 2px;
     margin-top: 5px;
     margin-bottom: 5px;
     box-shadow: 0 1.5px 3px -1px rgba(30, 30, 30, 0.6);
     color: #F29A3E;
-    font-weight: 700;
+    font-weight: 650;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 

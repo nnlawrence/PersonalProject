@@ -29,6 +29,7 @@ class Menu extends Component {
             return (<div className='return-content' key={index} menu={menu}>
                          <div><h1>{menu.menu_item}</h1></div>
                          <div><h2>${menu.menu_price}</h2></div>
+                         {/* <div><h2>${menu.menu_description}</h2></div> */}
                     </div>)
         })
 

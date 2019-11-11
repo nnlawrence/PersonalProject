@@ -8,7 +8,7 @@
 }
 
 .menu-comp > h1 {
-    font-size: 55px;
+    font-size: 50px;
     font-weight: 800;
     font-family: fantasy;
     text-align: center;
@@ -20,18 +20,19 @@
 
 .menu-display {
     width: 75%;
-    height: 550px;
+    height: 85%;
     border-radius: 12px;
     -webkit-box-shadow: 0 14px 28px 0 rgba(0,0,0,.45), 0 10px 10px 0 rgba(0,0,0,.46);
     box-shadow: 0 14px 28px 0 rgba(0,0,0,.55), 0 10px 10px 0 rgba(0,0,0,.56);
     background: rgba(245, 245, 245, .9);
-    margin-top: 15px;
+    margin-top: 5px;
     /* margin-bottom: 20px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    overflow: scroll;
 }
 
 .return-content {

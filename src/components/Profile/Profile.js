@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import TruckList from '../TruckList/TruckList';
 import { Link } from 'react-router-dom';
 import Switch from '../Switch';
+import swal from 'sweetalert';
 
 //component did mount sending get request to backend to select all where user id is id that is stored in redux or session
 
@@ -47,11 +48,18 @@ class Profile extends Component {
     deleteTruck = (truck_id, user_id) => {
         axios.delete(`/api/truck/${truck_id}/${this.props.store.id}`).then(res => {
             console.log(res.data)
+
                 this.setState({
                     addedTruck: res.data
                 })
             })
             .catch(err => console.log(err))
+            swal({
+                title: "Deleted!😮",
+                text: "Your Truck Has Been Deleted",
+                icon: "success",
+              });
+
     }
 
     // edit your truck information
@@ -71,6 +79,11 @@ class Profile extends Component {
                 this.updateTruck(res.data)
                 // this.handleToggle()
         })
+        swal({
+            title: "Updated!💨",
+            text: "Movin' On Up!",
+            icon: "success",
+          });
     }
 
     // submit the edited information
