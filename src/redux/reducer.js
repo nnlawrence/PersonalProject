@@ -1,7 +1,8 @@
 const initialState = {
     id: '',
     email: '',
-    photo: ''
+    photo: '',
+    truck_id: ''
 }
 
 

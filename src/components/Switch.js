@@ -8,22 +8,25 @@ import { connect } from 'react-redux';
 
 const {useState, useEffect} = React;
 
-function SwitchesSize(props) {
+function OpenStatus(props) {
   const [checked, setChecked] = useState(false);
   console.log(checked)
 
   useEffect(() => {
-    setTimeout(() => {
-      setChecked([{id: 0, content: 'foo'}])
-    })
-  })
+    function statusChange(status) {
+      setChecked(status.checked);
+    }})
+  //   if (checked === null) {
+  //     return 'Loading...';
+  //   }
+  //   return checked ? 'Open' : 'Closed';
+  // }
 
-  const toggleChecked = async (checked) => {
-    console.log(checked)
+  const toggleChecked = async () => {
+    
     await setChecked(prev => !prev);
-    console.log(checked)
-    axios.put(`/api/opentruck/${props.reduxState.id}`, checked).then(res => {
-      checked(res.data)
+    axios.put(`/api/opentruck/${props.reduxState.id}`, {checked}).then(res => {
+      // setChecked(res.data)
   })
   };
 
@@ -44,4 +47,4 @@ const mapStateToProps = (reduxState) => {
   return {reduxState}
 }
 
-export default connect(mapStateToProps, {})(SwitchesSize)
+export default connect(mapStateToProps, {})(OpenStatus)

@@ -21,7 +21,6 @@ class Form extends Component {
     }
     //function getting trucks invoked
     componentDidMount() {
-        console.log(this.state)
         this.getTrucks()
     }
     //get trucks from db

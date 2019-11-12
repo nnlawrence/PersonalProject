@@ -163,16 +163,25 @@ class Profile extends Component {
           })
     }
 
-    cancel = () => {
-        this.setState({
-            truck_name: '',
-            food_type: '',
-            image: '',
-            contact: '',
-            latitude: '',
-            longitude: '',
-            edit: false,
-        })
+    cancel = (id) => {
+        
+            let truckFilter = this.state.addedTruck.filter((element, index) => {
+                if (element.truck_id === id) return element
+             })
+             truckFilter = truckFilter[0]
+     
+             console.log(truckFilter)
+             this.setState({
+                 selectedTruck: id,
+                 truck_name: truckFilter.truck_name,
+                 food_type: truckFilter.food_type,
+                 image: truckFilter.image,
+                 contact: truckFilter.contact,
+                 latitude: truckFilter.latitude,
+                 longitude: truckFilter.longitude
+             //use the found truck to set state on inputs
+             })
+        
     }
 
     // // Toggle state true or false

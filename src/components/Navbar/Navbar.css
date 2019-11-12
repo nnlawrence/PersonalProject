@@ -16,6 +16,7 @@
     font-size: 30px;
     margin-left: 20px;
     /* text-shadow: -1px -1px 0 #000080, 1px -1px 0 #000080, -1px 1px 0 #000080, 1px 1px 0 #000080; */
+    text-shadow: 1px 1px 3px #585858;
 }
 
 .navbar > .navbar-menu {
@@ -46,6 +47,7 @@
     font-size: 25px;
     margin-right: 20px;
     /* text-shadow: -1px -1px 0 #000080, 1px -1px 0 #000080, -1px 1px 0 #000080, 1px 1px 0 #000080; */
+    text-shadow: 1px 1px 3px #585858;
 }
 
 .hamburger:hover {
@@ -130,6 +132,7 @@
 .linki {
     color: white;
     text-decoration: none;
+    text-shadow: 1px 1px 3px #585858;
 }
 
 .linki:hover {

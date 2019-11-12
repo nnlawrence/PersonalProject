@@ -63,7 +63,7 @@ class GoogleMapsContainer extends React.Component {
                            name = { addresses.truck_name } 
                            type = {addresses.food_type}
                            contact = {addresses.contact}
-                           available = {addresses.available}
+                           available = {addresses.available ? 'Open' : 'Closed'}
                           //  label={addresses.truck_name}
                             />
                            
