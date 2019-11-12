@@ -38,10 +38,10 @@ class Navbar extends Component {
                     <h1 className='title'>Voilà</h1>
                 </ul>
                 <ul className='navbar-menu'>
-                    <li>Home</li>
-                    <li>Profile</li>
-                    <li>Login/Register</li>
-                    <li>Logout</li>
+                    <li><Link className='linki' to='/'>Home</Link></li>
+                    <li><Link className='linki' to='/profile'>Profile</Link></li>
+                    <li><Link className='linki' to='/auth/login'>Login/Register</Link></li>
+                    <li onClick={ this.handleLogout }><Link className='linki' to='/'>Logout</Link></li>
                 </ul>
                 <div className='hamburger' onClick={ this.openMenu }>
                     &#9776;

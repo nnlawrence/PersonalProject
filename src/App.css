@@ -2,7 +2,7 @@
 /* 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80' */
 .App {
     /* background-image: url('https://images.unsplash.com/photo-1501959915551-4e8d30928317?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'); */
-    height: 110vh;
+    height: 100vh;
     width: 100%;
     background-size: cover;
     /* transform: rotateY(180deg); */

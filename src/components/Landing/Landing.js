@@ -45,7 +45,7 @@ class Landing extends Component {
     }
 
     render() { 
-        console.log(this.state)
+        console.log(this.state.trucks)
         const mappedTrucks = this.state.trucks.map((list, index) => {
             return <TruckList key={ index } trucks={ list } deleteTruck={ this.deleteTruck } />
         })

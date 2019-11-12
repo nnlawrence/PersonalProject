@@ -119,6 +119,8 @@ class Profile extends Component {
         })
     }
 
+
+
     // edit input field
     editTruckName = (val) => {
         this.setState({
@@ -159,6 +161,18 @@ class Profile extends Component {
           this.setState({
               longitude: val
           })
+    }
+
+    cancel = () => {
+        this.setState({
+            truck_name: '',
+            food_type: '',
+            image: '',
+            contact: '',
+            latitude: '',
+            longitude: '',
+            edit: false,
+        })
     }
 
     // // Toggle state true or false
@@ -205,6 +219,7 @@ class Profile extends Component {
                     </div> 
                     <div className='profile-btn' >
                     <Link to='/form'><button className='add-new-truck'>Add New Truck</button></Link>  
+                    <button className='cancel-edit' onClick={() => {this.cancel(this.state.selectedTruck)}}>Cancel</button>
                     <button className='submit-edit' onClick={() => {this.editTruck(this.state.selectedTruck)}}>Submit</button>
                     </div>
               </div> 

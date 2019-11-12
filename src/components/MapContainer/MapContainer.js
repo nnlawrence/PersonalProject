@@ -63,6 +63,8 @@ class GoogleMapsContainer extends React.Component {
                            name = { addresses.truck_name } 
                            type = {addresses.food_type}
                            contact = {addresses.contact}
+                           available = {addresses.available}
+                          //  label={addresses.truck_name}
                             />
                            
                     })
@@ -119,6 +121,7 @@ const style = {
                     <p>Truck: {this.state.selectedPlace.name}</p>
                     <p>Food: {this.state.selectedPlace.type}</p>
                     <p>Contact: {this.state.selectedPlace.contact}</p>
+                    <p>Availability: {this.state.selectedPlace.available}</p>
                     <a href="https://thefoodtruckleague.com/">View Events</a>
                 </div>
         </InfoWindow>

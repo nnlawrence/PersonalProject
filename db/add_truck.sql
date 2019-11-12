@@ -5,7 +5,8 @@ insert into trucks (
     contact,
     latitude,
     longitude,
-    user_id
+    user_id,
+    available
 )
 values (
     $1,
@@ -14,7 +15,8 @@ values (
     $4,
     $5,
     $6,
-    $7
+    $7,
+    false
 );
 
 select * from trucks;

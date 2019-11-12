@@ -13,7 +13,36 @@ import { withRouter } from 'react-router-dom';
         render() {
         const { truck_id, truck_name, food_type, image, contact } = this.props.trucks
         console.log(this.props)
-        //if(isAdmin)
+        if(this.props.location.pathname === '/'){
+            return ( 
+                <div className='truck-details'>
+                    <div className='route-to-menu' onClick={ this.menuRoute }>
+                    <h1>{ truck_name }</h1>
+                    <img src={image} alt='pic' />
+                    <p>{ food_type}</p>
+                    <p>{ contact }</p>
+                    </div>
+                    {/* <p>{ latitude }</p>
+                    <p>{ longitude }</p> */}
+                </div>
+             ); 
+        } else {
+            return ( 
+                <div className='truck-details'>
+                    <span className='x-delete' onClick={ () =>
+                         this.props.deleteTruck(truck_id) }>x</span>
+                    <div className='route-to-menu' onClick={ this.menuRoute }>
+                    <h1>{ truck_name }</h1>
+                    <img src={image} alt='pic' />
+                    <p>{ food_type}</p>
+                    <p>{ contact }</p>
+                    </div>
+                    {/* <p>{ latitude }</p>
+                    <p>{ longitude }</p> */}
+                    <button className='select-for-edit' onClick={() => this.props.selectTruck(truck_id)}>Select For Edit</button>
+                </div>
+             );
+        }
         
         return ( 
             <div className='truck-details'>

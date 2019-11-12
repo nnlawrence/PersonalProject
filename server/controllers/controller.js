@@ -78,5 +78,16 @@ module.exports = {
         .catch(err => {
             res.status(500).send(err)
         })
+    },
+    openTruck: (req, res) => {
+        const {user_id} = req.params
+        const db = req.app.get('db')
+        console.log(user_id)
+        const { checked } = req.body
+        console.log(req.body)
+        db.open_truck(+user_id, checked)
+        .then(data => {
+            return res.status(200).send(data)
+        })
     }
 }

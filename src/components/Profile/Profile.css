@@ -98,6 +98,17 @@
     border-radius: 12px;
 }
 
+.cancel-edit {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    /* margin-bottom: 10px; */
+    font-family: cursive;
+    /* margin-top: -5px; */
+    background: rgba(146, 114, 45, 0.8);
+    border-radius: 12px;
+}
+
 .submit-edit:hover {
     background: rgba(0,0,0,0.8);
     color: white;
