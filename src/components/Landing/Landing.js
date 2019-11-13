@@ -15,13 +15,11 @@ class Landing extends Component {
     }
     //function running get trucks
     componentDidMount() {
-        console.log(this.state)
         this.getTrucks()
     }
     //get trucks from db
     getTrucks = () => {
         axios.get('/api/trucks').then(res => {
-            console.log(res)
             this.setState({
                 trucks: res.data
             })
@@ -45,7 +43,6 @@ class Landing extends Component {
     }
 
     render() { 
-        console.log(this.state.trucks)
         const mappedTrucks = this.state.trucks.map((list, index) => {
             return <TruckList key={ index } trucks={ list } deleteTruck={ this.deleteTruck } />
         })

@@ -23,7 +23,6 @@ class Auth extends Component {
                 password: '',
                 isAdmin: ''
             })
-            console.log(res.data)
             this.props.updateUser(res.data)
             if(this.state.isAdmin !== false){this.props.history.push('/profile')}else{
                 this.props.history.push('/')

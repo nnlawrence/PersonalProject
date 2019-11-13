@@ -27,7 +27,6 @@ class GoogleMapsContainer extends React.Component {
   //get addresses from trucks table in database
   getAddresses = () => {
       axios.get('/api/addresses').then(res => {
-          console.log(res)
           this.setState({
               addresses: res.data
           })
@@ -35,7 +34,6 @@ class GoogleMapsContainer extends React.Component {
   }
 
   onMarkerClick = (props, marker, e) => {
-    console.log(props)
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
@@ -51,7 +49,6 @@ class GoogleMapsContainer extends React.Component {
     }
   }
   render() {
-    console.log(this.state.selectedPlace)
 
     const mappedAddresses = this.state.addresses.map((addresses, index) => {
             return <Marker key={index} 

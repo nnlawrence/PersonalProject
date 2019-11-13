@@ -10,7 +10,6 @@ const {useState, useEffect} = React;
 
 function OpenStatus(props) {
   const [checked, setChecked] = useState(false);
-  console.log(checked)
 
   useEffect(() => {
     function statusChange(status) {
@@ -30,7 +29,6 @@ function OpenStatus(props) {
   })
   };
 
-  console.log(checked)
   //create a put request to backend changing true or false of open
 
   return (

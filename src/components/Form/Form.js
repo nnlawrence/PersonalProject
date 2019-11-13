@@ -26,7 +26,6 @@ class Form extends Component {
     //get trucks from db
     getTrucks = () => {
         axios.get('/api/trucks').then(res => {
-            console.log(res)
             this.setState({
                 trucks: res.data
             })
@@ -60,7 +59,6 @@ class Form extends Component {
     }
 
     render() { 
-        console.log(this.props)
         return ( 
             <div className='new-truck-info'>
                 <h1 className='new-form-title'>New Food Truck!</h1>

@@ -14,7 +14,6 @@ class Menu extends Component {
     componentDidMount() {
         let id = +this.props.match.params.id
         // .location.pathname[this.props.location.pathname.length - 1]
-        console.log(id)
         axios.get(`/api/menu/${id}`)
         .then(res => {
             this.setState({
@@ -24,7 +23,6 @@ class Menu extends Component {
     }
 
     render() {
-        console.log(this.state.menu)
         const mappedMenu = this.state.menu.map((menu, index) => {
             return (<div className='return-content' key={index} menu={menu}>
                          <div><h1>{menu.menu_item}</h1></div>

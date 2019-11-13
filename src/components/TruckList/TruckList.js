@@ -12,7 +12,6 @@ import { withRouter } from 'react-router-dom';
 
         render() {
         const { truck_id, truck_name, food_type, image, contact } = this.props.trucks
-        console.log(this.props)
         if(this.props.location.pathname === '/'){
             return ( 
                 <div className='truck-details'>

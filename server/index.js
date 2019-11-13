@@ -8,6 +8,8 @@ const actrl = require('./controllers/authController');
 
 const app = express();
 
+app.use( express.static( `${__dirname}/../build` ) );
+
 app.use(express.json());
 
 massive(CONNECTION_STRING).then(db => {
