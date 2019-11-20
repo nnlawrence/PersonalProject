@@ -81,6 +81,7 @@ module.exports = {
     },
     openTruck: (req, res) => {
         const {user_id} = req.params
+        console.log(req.params)
         const db = req.app.get('db')
         const { checked } = req.body
         db.open_truck(+user_id, checked)

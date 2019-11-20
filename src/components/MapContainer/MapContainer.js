@@ -2,6 +2,8 @@ import React from 'react';
 import { GoogleApiWrapper, InfoWindow, Map, Marker } from 'google-maps-react';
 import axios from 'axios';
 import './MapContainer.css'
+
+const keys = require('../../config')
 // import Paper from 'material-ui/Paper';
 // import Typography from 'material-ui/Typography';
 // import { typography } from 'material-ui/styles';
@@ -126,129 +128,7 @@ const style = {
     );
   }
 }
+
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyDW2WZ_tzinl9WJujGmtiDIYwTmPAuHzk0'
+  apiKey: keys.googleKey
 })(GoogleMapsContainer)
-
-
-
-
-// import React, { Component } from 'react';
-// import 'reset.css';
-// import { Map, GoogleApiWrapper, InfoWindow, Marker, CurrentLocation } from 'google-maps-react';
-// import './MapContainer.css';
-// import axios from 'axios';
-// // import CurrentLocation from '../Map/Map';
-// // import './MapContainer.css';
-
-
-
-// //componentDidMount get request to backend for lat long from trucks table
-// //update this.state.addresses
-
-// //this.state.addresses.map((address) => {
-// //return <Marker
-// //position={{lat: address.lat, lng: address.lng}}
-// //})
-
-// const mapStyles = {
-//   width: '98%',
-//   height: '35%',
-//   marginLeft: '1%',
-//   marginRight: '1%',
-//   marginTop: '8px',
-//   marginBottom: '8px',
-//   boxShadow: '5px 5px 28px 5px rgba(0,0,0,0.8)',
-//   borderRadius: '6px',
-//   position: 'absolute'
-// };
-
-// export class MapContainer extends Component {
-//     state = {
-//      showingInfoWindow: false,  //Hides or the shows the infoWindow
-//      activeMarker: {},          //Shows the active marker upon click
-//      selectedPlace: {},         //Shows the infoWindow to the selected place upon a marker
-//      addresses: [],
-//      draggable: false          
-//   }
-
-//   //function getting addresses
-//   componentDidMount() {
-//       this.getAddresses()
-//   }
-
-//   //get addresses from trucks table in database
-//   getAddresses = () => {
-//       axios.get('/api/addresses').then(res => {
-//           console.log(res)
-//           this.setState({
-//               addresses: res.data
-//           })
-//       })
-//   }
-
-//   onMarkerClick = (props, marker, e) =>
-//     this.setState({
-//       selectedPlace: props,
-//       activeMarker: marker,
-//       showingInfoWindow: true
-//     });
-
-//   onClose = props => {
-//     if (this.state.showingInfoWindow) {
-//       this.setState({
-//         showingInfoWindow: false,
-//         activeMarker: null
-//       });
-//     }
-//   };
-
-//   render() {
-//     console.log(this.props)
-//     const mappedAddresses = this.state.addresses.map((addresses, index) => {
-//       return <Marker key={index} 
-//                      position={{lat: `${addresses.latitude}`, lng: `${addresses.longitude}`}}
-//                      onClick={() => this.onMarkerClick(addresses)} label={addresses.truck_name} >
-                     
-//               </Marker>
-//     })
-//     return (
-//       <div className='google-map'>
-//       <Map
-//         google={this.props.google}
-//         zoom={8}
-//         style={mapStyles}
-//         initialCenter={{
-//          lat: 40.391617,
-//          lng: -111.850769
-//         }}
-//       >
-//         {/* <CurrentLocation centerAroundCurrentLocation
-//         google={this.props.google} > */}
-//         {mappedAddresses}
-        
-//         {/* </CurrentLocation> */}
-//         </Map>
-
-//         {/* <CurrentLocation centerAroundCurrentLocation
-//       google={this.props.google} lat={addresses.latitude} lng={addresses.longitude}></CurrentLocation> */}
-        
-//         {/* <InfoWindow
-//                     marker={this.state.activeMarker}
-//                     visible={this.state.showingInfoWindow}
-//                     onClose={this.onClose}
-//                 >
-//                 <div>
-//                     <h4>{this.state.addresses.truck_name}</h4>
-//                 </div>
-//             </InfoWindow>   */}
-        
-      
-//       </div>
-//     );
-//   }
-// }
-
-// export default GoogleApiWrapper({
-//   apiKey: 'AIzaSyDW2WZ_tzinl9WJujGmtiDIYwTmPAuHzk0'
-// })(MapContainer);

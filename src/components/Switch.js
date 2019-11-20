@@ -28,13 +28,13 @@ function OpenStatus(props) {
       // setChecked(res.data)
   })
   };
-
+  console.log(checked)
   //create a put request to backend changing true or false of open
 
   return (
     <FormGroup>
       <FormControlLabel
-        control={<Switch checked={checked} onChange={() => toggleChecked()} />}
+        control={<Switch checked={!checked} onChange={() => toggleChecked()} />}
         // label="Available"
       />
     </FormGroup>
@@ -46,3 +46,7 @@ const mapStateToProps = (reduxState) => {
 }
 
 export default connect(mapStateToProps, {})(OpenStatus)
+//40.442860
+//-111.893051
+//http://roaminghunger.com/img/trucks/original/9926/58a4cf9d-1088-44c2-a8ba-1c0446204482.png
+//4100 North, Chapel Ridge Rd #350, Lehi, UT 84043
